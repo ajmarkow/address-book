@@ -7,10 +7,8 @@ $(document).ready(function () {
     const phonenumber = $("input#phone").val();
     event.preventDefault();
     addToContacts(name);
-
+    addCardInfo(name, address, emailaddress, phonenumber)
   });
-
-
 });
 
 
@@ -21,6 +19,20 @@ function addToContacts(name) {
 }
 function addCardInfo(name, address, emailaddress, phonenumber) {
 
-
+  $("#contactInfo #name").append("<br>" + "<strong>" + name + "</strong>");
+  $("#contactInfo #address").append("<br>" + "<strong>" + address + "</strong>");
+  $("#contactInfo #emailaddress").append("<br>" + "<strong>" + emailaddress + "</strong>");
+  $("#contactInfo #phone").append("<br>" + "<strong>" + phonenumber + "</strong >");
 
 }
+
+/*function addContactCards(name, address, emailaddress, phonenumber) {
+  $("div#contactcards").add("")
+});*/
+
+
+
+
+
+
+
